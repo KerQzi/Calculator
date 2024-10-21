@@ -8,29 +8,46 @@
     android:background="@color/black"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+    <Button
+        android:id="@+id/btToNewActivity"
+        android:visibility="gone"
+        android:layout_width="182dp"
+        android:layout_height="64dp"
+        android:text="BUTTON"
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:backgroundTint="@color/red"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/container"
         app:layout_constraintTop_toTopOf="parent">
 
         <HorizontalScrollView
-            android:layout_gravity="bottom"
             android:layout_width="match_parent"
-            android:paddingHorizontal="36dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:clipToPadding="false"
-            android:layout_height="wrap_content" >
+            android:paddingHorizontal="36dp">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:textSize="80sp"
-                android:textColor="@color/white"
+                android:layout_gravity="end"
                 android:maxLines="1"
-                android:layout_gravity="end"/>
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="80sp" />
 
         </HorizontalScrollView>
 
