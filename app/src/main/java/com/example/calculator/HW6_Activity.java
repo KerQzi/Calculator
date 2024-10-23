@@ -66,7 +66,7 @@ public class HW6_Activity extends AppCompatActivity {
 
         heartButton = findViewById(R.id.heartButton);
         heartButton.setOnClickListener(v -> {
-            isHeartPressed = !isHeartPressed; // Меняем состояние
+            isHeartPressed = !isHeartPressed;
 
             if (isHeartPressed) {
                 heartButton.setImageResource(R.drawable.heart_pressed);

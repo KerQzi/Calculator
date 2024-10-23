@@ -41,7 +41,7 @@
                 android:layout_width="48dp"
                 android:layout_height="36dp"
                 android:src="@drawable/heart"
-                android:background="?attr/selectableItemBackground"
+                android:background="@drawable/rectangle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,7 +73,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/textResult"
                 tools:ignore="MissingConstraints">
 
-                <!-- Price (TextView) -->
                 <TextView
                     android:id="@+id/priceText"
                     android:layout_width="wrap_content"
@@ -135,7 +134,6 @@
 
                 </LinearLayout>
 
-                <!-- Accessibility (TextView с иконкой) -->
                 <TextView
                     android:id="@+id/accessibilityText"
                     android:layout_width="wrap_content"
@@ -200,26 +198,29 @@
         app:layout_constraintStart_toStartOf="@id/nextButton"
         app:layout_constraintEnd_toStartOf="@id/priceSeekBar" />
 
-    <SeekBar
+    <com.google.android.material.slider.RangeSlider
         android:id="@+id/priceSeekBar"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintStart_toEndOf="@id/categorySpinner"
-        app:layout_constraintEnd_toEndOf="@id/nextButton"
-        app:layout_constraintTop_toBottomOf="@id/nextButton"
-        tools:ignore="MissingClass" />
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:valueFrom="0"
+        android:valueTo="100"
+        app:values="@array/initial_slider_values"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextButton"
+        tools:ignore="MissingConstraints" />
 
-
-    <SeekBar
+    <com.google.android.material.slider.RangeSlider
         android:id="@+id/accessibilitySeekBar"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/priceSeekBar"
-        app:layout_constraintStart_toStartOf="@+id/priceSeekBar"
-        app:layout_constraintTop_toBottomOf="@id/priceSeekBar"
-        tools:ignore="MissingClass" />
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:valueFrom="0"
+        android:valueTo="100"
+        app:values="@array/initial_slider_values"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceSeekBar"
+        tools:ignore="MissingConstraints" />
 
         
 
